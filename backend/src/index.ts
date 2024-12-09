@@ -11,6 +11,7 @@ async function start(){
         app.use(body.json({limit : '500kb'}));
 
         app.use('/products', require('./router/products'));
+        app.use('/analytics', require('./router/analytics'));
 
         app.listen(3000, ()=>{
             console.log('listening on port 3000'); 
